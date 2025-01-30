@@ -8,6 +8,7 @@
 template <typename T>
 class PriorityQueue
 {
+public:
     explicit PriorityQueue(unsigned short int maxPriority);
     ~PriorityQueue();
     [[nodiscard]] T operator[] (int const i) const { return Get(i); }

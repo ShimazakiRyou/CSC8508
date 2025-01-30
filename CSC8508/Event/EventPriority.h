@@ -14,4 +14,4 @@ enum EventPriority : uint8_t
     EARLY
 };
 
-//EVENTPRIORITY_H
+#endif //EVENTPRIORITY_H

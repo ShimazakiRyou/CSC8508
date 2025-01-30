@@ -36,13 +36,13 @@ QUEUE EventManager::listeners = QUEUE(EARLY); // EARLY because that's the highes
 
 template<typename E>
 void EventManager::Call(E* e) {
-    for (int i = 0; i < listeners<E>.get_length(); i++) listeners<E>[i]->OnEvent(e);
+    for (int i = 0; i < listeners<E>.GetLength(); i++) listeners<E>[i]->OnEvent(e);
 }
 
 
 template<typename E>
 void EventManager::RegisterListener(EventListener<E>* listener, EventPriority priority) {
-    listeners<E>.add(listener, priority);
+    listeners<E>.Insert(listener, priority);
 }
 
 #endif //EVENTMANAGER_H
