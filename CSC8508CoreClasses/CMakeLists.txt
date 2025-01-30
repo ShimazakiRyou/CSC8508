@@ -136,7 +136,6 @@ set(ALL_FILES
     ${Networking}
     ${Physics}
     ${enet_Files}
-		PriorityQueue.h
 )
 
 set_source_files_properties(${ALL_FILES} PROPERTIES LANGUAGE CXX)
