@@ -23,7 +23,12 @@ if(USE_VULKAN)
         ${Header_Files}
         ${Source_Files}
         ${SHADER_FILES}
-    )
+			Event/Event.h
+			Event/CancellableEvent.h
+			Event/EventListener.h
+			Event/EventPriority.h
+			Event/EventManager.h
+	)
 
 foreach (file ${SHADER_FILES})
     get_filename_component(file_name ${file} NAME)

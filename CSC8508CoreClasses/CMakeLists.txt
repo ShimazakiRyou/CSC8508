@@ -135,7 +135,8 @@ set(ALL_FILES
     ${Collision_Detection}
     ${Networking}
     ${Physics}
-    ${enet_Files}   
+    ${enet_Files}
+		PriorityQueue.h
 )
 
 set_source_files_properties(${ALL_FILES} PROPERTIES LANGUAGE CXX)
