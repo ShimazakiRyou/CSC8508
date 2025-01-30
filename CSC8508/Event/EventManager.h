@@ -29,10 +29,13 @@ public:
 
     /**
      * Deletes all listeners of a target Event type and clears the listeners vec.
+     *
+     * Does NOT delete all listeners for EVERY Event type. If you want to do that, you have to keep track of what Event
+     * types you've used.
      * @tparam E Event type (child class)
      */
     template <typename E>
-    static void DeleteAllListeners();
+    static void DeleteEventListeners();
 
 protected:
     template <typename E>
@@ -57,7 +60,7 @@ void EventManager::RegisterListener(EventListener<E>* listener, EventPriority pr
 
 
 template<typename E>
-void EventManager::DeleteAllListeners() {
+void EventManager::DeleteEventListeners() {
     for (EventListener<E> const* l : listeners<E>.GetValues()) { delete l; }
     listeners<E>.Clear();
 }
