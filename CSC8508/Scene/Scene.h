@@ -5,6 +5,9 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+/**
+ * Base class for all game scenes. Scenes should be saved on the heap, then registered using SceneManager::Set().
+ */
 class Scene {
 public:
     virtual ~Scene() = default;

@@ -7,7 +7,8 @@
 #include "Scene.h"
 
 /**
- * SceneManager is a static class that holds pointers to the game's different scenes and dictates the current
+ * SceneManager is a static class that holds pointers to the game's different scenes and dictates the current. The game
+ * loop should grab the current scene from here and call its Update().
  */
 class SceneManager final {
 public:
@@ -68,6 +69,5 @@ inline void SceneManager::SetCurrent(Scene* scene) {
     if (old) old->OnUnload();
     if (current) current->OnLoad();
 }
-
 
 #endif //SCENEMANAGER_H
