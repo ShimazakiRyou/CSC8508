@@ -13,6 +13,11 @@
 
 class EventManager {
 public:
+    /**
+     * Invokes the OnEvent() functions of all registered listeners for this event type.
+     * @tparam E Event type (child class)
+     * @param e Event instance
+     */
     template <typename E>
     static void Call(E* e);
 
