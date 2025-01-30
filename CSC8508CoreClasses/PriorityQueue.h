@@ -4,6 +4,7 @@
 
 #ifndef PRIORITYQUEUE_H
 #define PRIORITYQUEUE_H
+#include <vector>
 
 template <typename T>
 class PriorityQueue
@@ -20,6 +21,8 @@ public:
 
     [[nodiscard]]
     T Get(unsigned int index) const { return vec.at(index); }
+
+    void Clear() { vec.clear(); }
 
     /**
      * @return Ordered std::vector of all values

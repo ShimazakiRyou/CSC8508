@@ -98,6 +98,7 @@ set(Source_Files
     "Debug.cpp"
     "GameObject.cpp"
     "GameWorld.cpp"
+	"PriorityQueue.h"
     "RenderObject.cpp"
     "Transform.cpp"
 )
