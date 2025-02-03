@@ -14,6 +14,8 @@ namespace NCL {
 			NetworkedGame();
 			~NetworkedGame();
 
+			std::string GenerateID();
+
 			void StartAsServer();
 			void StartAsClient(char a, char b, char c, char d);
 

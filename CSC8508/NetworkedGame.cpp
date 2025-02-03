@@ -44,6 +44,23 @@ NetworkedGame::~NetworkedGame()	{
 	delete thisClient;
 }
 
+std::string NetworkedGame::GenerateID()
+{
+	auto now = std::chrono::system_clock::now();
+	auto timestamp = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
+
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<int> dist(10000, 99999);
+
+	int randomNum = dist(gen);
+
+	std::ostringstream oss;
+	oss << timestamp << randomNum;
+
+	return oss.str();
+}
+
 void NetworkedGame::StartAsServer() 
 {
 	thisServer = new GameServer(NetworkBase::GetDefaultPort(), 4);
