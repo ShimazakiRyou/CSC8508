@@ -1,9 +1,10 @@
+#pragma once
 //
 // Contributors: Alasdair
 //
 
-#ifndef PHYSICSCOMPONENT_H
-#define PHYSICSCOMPONENT_H
+#ifndef BOUNDSCOMPONENT_H
+#define BOUNDSCOMPONENT_H
 
 #include "Transform.h"
 #include "IComponent.h"
@@ -14,16 +15,20 @@ using std::vector;
 namespace NCL::CSC8508
 {
 
+	namespace PhysicsLayers {
+		enum LayerID { Default, Ignore_RayCast, UI, Player, Enemy, Ignore_Collisions };
+	}
+
 	class GameObject;
 	class PhysicsObject;
-	 
-	class PhysicsComponent : public IComponent
+
+	class BoundsComponent : public IComponent
 	{
 	public:
 
-		PhysicsComponent(GameObject* gameObject, CollisionVolume* collisionVolume);
+		BoundsComponent(GameObject* gameObject, CollisionVolume* collisionVolume);
 
-		~PhysicsComponent();
+		~BoundsComponent();
 
 		/**
 		 * Function invoked each frame.
@@ -55,22 +60,18 @@ namespace NCL::CSC8508
 			return boundingVolume;
 		}
 
-		PhysicsObject* GetPhysicsObject() const {
-			return physicsObject;
-		}
+		bool GetBroadphaseAABB(Vector3& outsize) const;
 
-		void SetPhysicsObject(PhysicsObject* newObject) {
-			physicsObject = newObject;
-		}
+		void UpdateBroadphaseAABB();
 
-		float GetRestitution() { return restitution; }
-		void SetRestitution(float newRestitution) { restitution = newRestitution; }
-
+		void AddToIgnoredLayers(PhysicsLayers::LayerID layerID) { ignoreLayers.push_back(layerID); }
+		const std::vector<PhysicsLayers::LayerID>& GetIgnoredLayers() const { return ignoreLayers; }
 
 	protected:
-		PhysicsObject* physicsObject;
-		float restitution = 0.2f;
+		CollisionVolume* boundingVolume;
+		Vector3 broadphaseAABB;
+		vector<PhysicsLayers::LayerID> ignoreLayers;
 	};
 }
 
-#endif //PHYSICSCOMPONENT_H
+#endif //BOUNDSCOMPONENT_H

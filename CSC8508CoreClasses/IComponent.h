@@ -60,6 +60,14 @@ namespace NCL::CSC8508
 		*/
 		void SetEnabled(bool enabled);
 
+		/**
+		* Function gets the component type
+		* @return the component type
+		*/
+		virtual const char* GetType() const {
+			return typeid(*this).name();
+		}
+
 	private:
 		GameObject* gameObject;
 		bool enabled;
