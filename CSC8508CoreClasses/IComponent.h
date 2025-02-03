@@ -16,7 +16,7 @@ namespace NCL::CSC8508
 	{
 	public:
 
-		IComponent(GameObject* gameObject) : gameObject(gameObject), enabled(true) {}
+		IComponent(GameObject& gameObject) : gameObject(gameObject), enabled(true) {}
 
 		virtual ~IComponent() = default;
 
@@ -46,7 +46,7 @@ namespace NCL::CSC8508
 		* Function gets the GameObject this component is attatched to.
 		* @return the GameObject this component is attatched to.
 		*/
-		GameObject* GetGameObject();
+		GameObject& GetGameObject();
 
 		/**
 		* Function Gets the enabled state of the component.
@@ -69,7 +69,7 @@ namespace NCL::CSC8508
 		}
 
 	private:
-		GameObject* gameObject;
+		GameObject& gameObject;
 		bool enabled;
 	};
 }

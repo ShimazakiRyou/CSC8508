@@ -6,14 +6,13 @@
 
 using namespace NCL::CSC8508;
 
-PhysicsComponent::PhysicsComponent(GameObject* gameObject, CollisionVolume* collisionVolume) : IComponent(gameObject) {
-	boundingVolume = collisionVolume;
+PhysicsComponent::PhysicsComponent(GameObject& gameObject, BoundsComponent* boundsComponent) : IComponent(gameObject) {
+	this->boundsComponent = boundsComponent;
 	physicsObject = nullptr;
 	vector<PhysicsLayers::LayerID> ignoreLayers = vector<PhysicsLayers::LayerID>();
 }
 
 PhysicsComponent::~PhysicsComponent() {
-	delete boundingVolume;
 	delete physicsObject;
 }
 

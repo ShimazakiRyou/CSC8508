@@ -19,14 +19,11 @@ namespace NCL::CSC8508
 		enum LayerID { Default, Ignore_RayCast, UI, Player, Enemy, Ignore_Collisions };
 	}
 
-	class GameObject;
-	class PhysicsObject;
-
 	class BoundsComponent : public IComponent
 	{
 	public:
 
-		BoundsComponent(GameObject* gameObject, CollisionVolume* collisionVolume);
+		BoundsComponent(GameObject& gameObject, CollisionVolume* collisionVolume);
 
 		~BoundsComponent();
 

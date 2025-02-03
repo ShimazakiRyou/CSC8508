@@ -7,7 +7,7 @@
 
 using namespace NCL::CSC8508;
 
-GameObject* IComponent::GetGameObject() {
+GameObject& IComponent::GetGameObject() {
 	return this->gameObject;
 }
 

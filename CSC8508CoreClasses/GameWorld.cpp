@@ -49,6 +49,22 @@ void GameWorld::RemoveGameObject(GameObject* o, bool andDelete) {
 	worldStateCounter++;
 }
 
+void GameWorld::GetPhysicsIterators(
+	PhysicsIterator& first,
+	PhysicsIterator& last) const {
+
+	first = physicsComponents.begin();
+	last = physicsComponents.end();
+}
+
+void GameWorld::GetBoundsIterators(
+	BoundsIterator& first,
+	BoundsIterator& last) const {
+
+	first = boundsComponents.begin();
+	last = boundsComponents.end();
+}
+
 void GameWorld::GetObjectIterators(
 	GameObjectIterator& first,
 	GameObjectIterator& last) const {
@@ -78,10 +94,10 @@ void GameWorld::UpdateWorld(float dt) {
 	}
 }
 
-bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObject, GameObject* ignoreThis, vector<Layers::LayerID>* ignoreLayers) const {
+bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObject, BoundsComponent* ignoreThis, vector<Layers::LayerID>* ignoreLayers) const {
 	RayCollision collision;
 
-	for (auto& i : gameObjects) {//objects might not be collideable etc...
+	for (auto& i : boundsComponents) {//objects might not be collideable etc...
 		if (!i->GetBoundingVolume()) 
 			continue;
 		if (i == ignoreThis) 
@@ -90,7 +106,7 @@ bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObje
 
 		if (ignoreLayers != nullptr) {
 			for (const Layers::LayerID& var : *ignoreLayers) {
-				if (i->GetLayerID() == var) {
+				if (i->GetGameObject()->GetLayerID() == var) {
 					toContinue = true;
 					break;
 				}
@@ -100,7 +116,7 @@ bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObje
 		if (toContinue)
 			continue;
 
-		if (i->GetLayerID() == Layers::Ignore_RayCast || i->GetLayerID() == Layers::UI)
+		if (i->GetGameObject()->GetLayerID() == Layers::Ignore_RayCast || i->GetGameObject()->GetLayerID() == Layers::UI)
 			continue;
 
 		RayCollision thisCollision;

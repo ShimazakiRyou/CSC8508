@@ -6,7 +6,7 @@
 
 using namespace NCL::CSC8508;
 
-BoundsComponent::BoundsComponent(GameObject* gameObject, CollisionVolume* collisionVolume) : IComponent(gameObject) {
+BoundsComponent::BoundsComponent(GameObject& gameObject, CollisionVolume* collisionVolume) : IComponent(gameObject) {
 	boundingVolume = collisionVolume;
 	vector<PhysicsLayers::LayerID> ignoreLayers = vector<PhysicsLayers::LayerID>();
 }

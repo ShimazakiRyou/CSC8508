@@ -8,20 +8,20 @@
 #include "Transform.h"
 #include "IComponent.h"
 #include "CollisionVolume.h"
+#include "BoundsComponent.h"
+
 
 using std::vector;
 
 namespace NCL::CSC8508
 {
-
-	class GameObject;
 	class PhysicsObject;
 	 
 	class PhysicsComponent : public IComponent
 	{
 	public:
 
-		PhysicsComponent(GameObject* gameObject, CollisionVolume* collisionVolume);
+		PhysicsComponent(GameObject& gameObject, BoundsComponent* boundsComponent);
 
 		~PhysicsComponent();
 
@@ -47,12 +47,12 @@ namespace NCL::CSC8508
 		 */
 		void OnDisable() override;
 
-		void SetBoundingVolume(CollisionVolume* vol) {
-			boundingVolume = vol;
+		const BoundsComponent* GetBoundsComponent() const {
+			return boundsComponent;
 		}
 
-		const CollisionVolume* GetBoundingVolume() const {
-			return boundingVolume;
+		void SetPhysicsObject(BoundsComponent* newComponent) {
+			boundsComponent = newComponent;
 		}
 
 		PhysicsObject* GetPhysicsObject() const {
@@ -69,6 +69,7 @@ namespace NCL::CSC8508
 
 	protected:
 		PhysicsObject* physicsObject;
+		BoundsComponent* boundsComponent;
 		float restitution = 0.2f;
 	};
 }
