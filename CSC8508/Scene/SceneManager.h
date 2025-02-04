@@ -30,7 +30,7 @@ public:
      * @param scene Scene instance
      */
     template <typename S>
-    static void Set(S* const scene) { sceneInstance<S> = scene; }
+    static void SetInstance(S* const scene) { sceneInstance<S> = scene; }
 
     /**
      * Gets the static singleton instance for a target Scene type.
@@ -38,7 +38,7 @@ public:
      * @return Scene instance or NULLPTR if not set
      */
     template <typename S>
-    static S* Get() { return sceneInstance<S>; }
+    static S* GetInstance() { return sceneInstance<S>; }
 
     /**
      * Sets the current Scene pointer to the static singleton instance of a target scene type.
