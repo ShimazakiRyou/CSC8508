@@ -96,30 +96,31 @@ void GameWorld::OperateOnContents(GameObjectFunc f) {
 	}
 }
 
-void GameWorld::UpdateWorld(float dt) {
+void GameWorld::UpdateWorld(float dt){
+	OperateOnContents(
+		[&](GameObject* o) {
+			if (o->IsEnabled()) {
+				o->InvokeUpdate(dt);
+			}
+		});
+}
 
-
-	for (auto& obj : gameObjects) {
-		obj->InvokeUpdate(dt);
-	}
-
-	/*
+void GameWorld::ShuffleWorldConstraints() {
 	auto rng = std::default_random_engine{};
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 	std::default_random_engine e(seed);
 
-	if (shuffleObjects) 
+	if (shuffleObjects)
 		std::shuffle(gameObjects.begin(), gameObjects.end(), e);
 
-	if (shuffleConstraints) 
+	if (shuffleConstraints)
 		std::shuffle(constraints.begin(), constraints.end(), e);
-	*/
 }
 
 bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObject, BoundsComponent* ignoreThis, vector<Layers::LayerID>* ignoreLayers) const {
 	RayCollision collision;
 
-	for (auto& i : boundsComponents) {//objects might not be collideable etc...
+	for (auto& i : boundsComponents) {
 		if (!i->GetBoundingVolume()) 
 			continue;
 		if (i == ignoreThis) 
@@ -164,11 +165,6 @@ bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObje
 	}
 	return false;
 }
-
-
-/*
-Constraint Tutorial Stuff
-*/
 
 void GameWorld::AddConstraint(Constraint* c) {
 	constraints.emplace_back(c);

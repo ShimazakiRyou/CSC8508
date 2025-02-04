@@ -38,6 +38,7 @@ namespace NCL {
 			PerspectiveCamera& GetMainCamera()  {
 				return mainCamera;
 			}
+			void ShuffleWorldConstraints();
 
 			void ShuffleConstraints(bool state) {
 				shuffleConstraints = state;

@@ -1,3 +1,7 @@
+//
+// Contributors: Alasdair
+//
+
 #include "GameObject.h"
 #include "CollisionDetection.h"
 #include "PhysicsObject.h"

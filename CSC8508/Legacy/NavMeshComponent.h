@@ -1,3 +1,7 @@
+//
+// Contributors: Alasdair
+//
+
 #pragma once
 #include "GameObject.h"
 

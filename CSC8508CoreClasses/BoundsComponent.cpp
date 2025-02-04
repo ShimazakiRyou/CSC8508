@@ -1,3 +1,7 @@
+//
+// Contributors: Alasdair
+//
+
 #include "BoundsComponent.h"
 #include "CollisionDetection.h"
 #include "PhysicsObject.h"

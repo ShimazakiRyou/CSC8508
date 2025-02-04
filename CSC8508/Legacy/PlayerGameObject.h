@@ -100,12 +100,12 @@ namespace NCL {
         protected:
             const Controller* activeController = nullptr;
             float speed = 5.0f;
-            float	yaw;
+            float	yaw = 0;
             EndGame endGame;
             IncreaseScore increaseScore;
 
-            PhysicsComponent* physicsComponent;
-            PhysicsObject* physicsObj;
+            PhysicsComponent* physicsComponent = nullptr;
+            PhysicsObject* physicsObj = nullptr;
         };
     }
 }
