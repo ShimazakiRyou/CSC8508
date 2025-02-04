@@ -8,8 +8,6 @@
 #include "Transform.h"
 #include "IComponent.h"
 #include "CollisionVolume.h"
-#include "BoundsComponent.h"
-
 
 using std::vector;
 
@@ -21,7 +19,7 @@ namespace NCL::CSC8508
 	{
 	public:
 
-		PhysicsComponent(GameObject& gameObject, BoundsComponent* boundsComponent);
+		PhysicsComponent(GameObject& gameObject);
 
 		~PhysicsComponent();
 
@@ -47,14 +45,6 @@ namespace NCL::CSC8508
 		 */
 		void OnDisable() override;
 
-		const BoundsComponent* GetBoundsComponent() const {
-			return boundsComponent;
-		}
-
-		void SetPhysicsObject(BoundsComponent* newComponent) {
-			boundsComponent = newComponent;
-		}
-
 		PhysicsObject* GetPhysicsObject() const {
 			return physicsObject;
 		}
@@ -63,14 +53,10 @@ namespace NCL::CSC8508
 			physicsObject = newObject;
 		}
 
-		float GetRestitution() { return restitution; }
-		void SetRestitution(float newRestitution) { restitution = newRestitution; }
 
 
 	protected:
 		PhysicsObject* physicsObject;
-		BoundsComponent* boundsComponent;
-		float restitution = 0.2f;
 	};
 }
 

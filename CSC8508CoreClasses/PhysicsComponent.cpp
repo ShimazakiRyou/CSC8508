@@ -6,10 +6,9 @@
 
 using namespace NCL::CSC8508;
 
-PhysicsComponent::PhysicsComponent(GameObject& gameObject, BoundsComponent* boundsComponent) : IComponent(gameObject) {
-	this->boundsComponent = boundsComponent;
+PhysicsComponent::PhysicsComponent(GameObject& gameObject) : IComponent(gameObject) {
 	physicsObject = nullptr;
-	vector<PhysicsLayers::LayerID> ignoreLayers = vector<PhysicsLayers::LayerID>();
+	vector<Layers::LayerID> ignoreLayers = vector<Layers::LayerID>();
 }
 
 PhysicsComponent::~PhysicsComponent() {

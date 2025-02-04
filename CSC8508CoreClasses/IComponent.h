@@ -20,27 +20,34 @@ namespace NCL::CSC8508
 
 		virtual ~IComponent() = default;
 
+
+		/**
+		 * Function invoked after the object and components have been instantiated.
+		 * @param deltaTime Time since last frame
+		 */
+		void InvokeOnAwake() { OnAwake(); }
+
 		/**
 		 * Function invoked each frame.
 		 * @param deltaTime Time since last frame
 		 */
-		virtual void Update(float deltaTime) = 0;
+		void InvokeUpdate(float deltaTime) { Update(deltaTime); }
 
 		/**
 		 * Function invoked each frame after Update.
 		 * @param deltaTime Time since last frame
 		 */
-		virtual void LateUpdate(float deltaTime) = 0;
+		void InvokeLateUpdate(float deltaTime) { LateUpdate(deltaTime); }
 
 		/**
 		 * Function invoked when the component is enabled.
 		 */
-		virtual void OnEnable() = 0;
+		void InvokeOnEnable() { OnEnable(); }
 
 		/**
 		 * Function invoked when the component is disabled.
 		 */
-		virtual void OnDisable() = 0;
+		void InvokeOnDisable() { OnDisable(); }
 
 		/**
 		* Function gets the GameObject this component is attatched to.
@@ -67,6 +74,13 @@ namespace NCL::CSC8508
 		virtual const char* GetType() const {
 			return typeid(*this).name();
 		}
+
+	protected:
+		virtual void OnAwake() {}
+		virtual void Update(float deltaTime) {}
+		virtual void LateUpdate(float deltaTime) {}
+		virtual void OnEnable() {}
+		virtual void OnDisable() {}
 
 	private:
 		GameObject& gameObject;

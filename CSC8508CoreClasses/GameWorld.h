@@ -13,7 +13,9 @@ namespace NCL {
 		class BoundsComponent;
 		class Constraint;
 
-		typedef std::function<void(GameObject*)> GameObjectFunc;
+		typedef std::function<void(GameObject*)> GameObjectFunc;		
+		typedef std::function<void(PhysicsComponent*)> PhysicsComponentFunc;
+
 		typedef std::vector<GameObject*>::const_iterator GameObjectIterator;
 		typedef std::vector<PhysicsComponent*>::const_iterator PhysicsIterator;
 		typedef std::vector<BoundsComponent*>::const_iterator BoundsIterator;
@@ -50,6 +52,7 @@ namespace NCL {
 			virtual void UpdateWorld(float dt);
 
 			void OperateOnContents(GameObjectFunc f);
+			void OperateOnPhysicsContents(PhysicsComponentFunc f);
 
 			void GetObjectIterators(
 				GameObjectIterator& first,
@@ -85,8 +88,8 @@ namespace NCL {
 
 			bool shuffleConstraints;
 			bool shuffleObjects;
-			int		worldIDCounter;
-			int		worldStateCounter;
+			int worldIDCounter;
+			int worldStateCounter;
 		};
 	}
 }

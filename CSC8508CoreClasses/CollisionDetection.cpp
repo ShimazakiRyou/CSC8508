@@ -149,8 +149,8 @@ bool CollisionDetection::ObjectIntersection(BoundsComponent* a, BoundsComponent*
 	collisionInfo.a = a;
 	collisionInfo.b = b;
 
-	Transform& transformA = a->GetGameObject()->GetTransform();
-	Transform& transformB = b->GetGameObject()->GetTransform();
+	Transform& transformA = a->GetGameObject().GetTransform();
+	Transform& transformB = b->GetGameObject().GetTransform();
 
 	VolumeType pairType = (VolumeType)((int)volA->type | (int)volB->type);
 

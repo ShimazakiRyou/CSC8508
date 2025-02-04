@@ -9,16 +9,13 @@
 #include "Transform.h"
 #include "IComponent.h"
 #include "CollisionVolume.h"
+#include "PhysicsComponent.h"
+#include "GameObject.h" // Just for layers namespace
 
 using std::vector;
 
 namespace NCL::CSC8508
 {
-
-	namespace PhysicsLayers {
-		enum LayerID { Default, Ignore_RayCast, UI, Player, Enemy, Ignore_Collisions };
-	}
-
 	class BoundsComponent : public IComponent
 	{
 	public:
@@ -57,17 +54,24 @@ namespace NCL::CSC8508
 			return boundingVolume;
 		}
 
+
+		const PhysicsComponent* GetPhysicsComponent() const {
+			return physicsComponent;
+		}
+
+
 		bool GetBroadphaseAABB(Vector3& outsize) const;
 
 		void UpdateBroadphaseAABB();
 
-		void AddToIgnoredLayers(PhysicsLayers::LayerID layerID) { ignoreLayers.push_back(layerID); }
-		const std::vector<PhysicsLayers::LayerID>& GetIgnoredLayers() const { return ignoreLayers; }
+		void AddToIgnoredLayers(Layers::LayerID layerID) { ignoreLayers.push_back(layerID); }
+		const std::vector<Layers::LayerID>& GetIgnoredLayers() const { return ignoreLayers; }
 
 	protected:
 		CollisionVolume* boundingVolume;
+		PhysicsComponent* physicsComponent;
 		Vector3 broadphaseAABB;
-		vector<PhysicsLayers::LayerID> ignoreLayers;
+		vector<Layers::LayerID> ignoreLayers;
 	};
 }
 

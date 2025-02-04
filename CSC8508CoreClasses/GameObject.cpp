@@ -6,10 +6,10 @@
 
 using namespace NCL::CSC8508;
 
-GameObject::GameObject(const std::string& objectName)	{
+GameObject::GameObject(const std::string& objectName, const bool newIsStatic): isStatic(newIsStatic)	{
 	name			= objectName;
 	worldID			= -1;
-	isActive		= true;
+	isEnabled		= true;
 	layerID = Layers::LayerID::Default;
 	tag = Tags::Tag::Default;
 	renderObject	= nullptr;

@@ -119,15 +119,15 @@ void PhysicsSystem::Update(float dt) {
 void PhysicsSystem::UpdateCollisionList() {
 	for (std::set<CollisionDetection::CollisionInfo>::iterator i = allCollisions.begin(); i != allCollisions.end(); ) {
 		if ((*i).framesLeft == numCollisionFrames) {
-			i->a->GetGameObject().OnCollisionBegin(i->b->GetGameObject());
-			i->b->GetGameObject().OnCollisionBegin(i->a->GetGameObject());
+			i->a->GetGameObject().OnCollisionBegin(i->b);
+			i->b->GetGameObject().OnCollisionBegin(i->a);
 		}
 
 		CollisionDetection::CollisionInfo& in = const_cast<CollisionDetection::CollisionInfo&>(*i);
 		in.framesLeft--;
 
 		if ((*i).framesLeft < 0) {
-			i->a->GetGameObject().OnCollisionEnd(i->b->GetGameObject());
+			i->a->GetGameObject().OnCollisionEnd(i->b);
 			i->b->GetGameObject().OnCollisionEnd(i->a);
 			i = allCollisions.erase(i);
 		}
@@ -152,11 +152,11 @@ void PhysicsSystem::BasicCollisionDetection() {
 	gameWorld.GetBoundsIterators(first, last);
 
 	for (auto i = first; i != last; ++i) {
-		if ((*i)->GetPhysicsObject() == nullptr) {
+		if ((*i)->GetPhysicsComponent() == nullptr) {
 			continue;
 		}
 		for (auto j = i + 1; j != last; ++j) {
-			if ((*j)->GetPhysicsObject() == nullptr) {
+			if ((*j)->GetPhysicsComponent() == nullptr) {
 				continue;
 			}
 			CollisionDetection::CollisionInfo info;
@@ -170,38 +170,35 @@ void PhysicsSystem::BasicCollisionDetection() {
 	}
 }
 
-void PhysicsSystem::ImpulseResolveCollision(PhysicsComponent& a, PhysicsComponent& b, CollisionDetection::ContactPoint& p) const {
-
-	auto aBounds = a.GetBoundsComponent();
-	auto bBounds = b.GetBoundsComponent();
-	auto aObject = a.GetGameObject();
-	auto bObject = b.GetGameObject();
+void PhysicsSystem::ImpulseResolveCollision(BoundsComponent& a, BoundsComponent& b, CollisionDetection::ContactPoint& p) const {
+	GameObject& aObject = a.GetGameObject();
+	GameObject& bObject = b.GetGameObject();
 
 	auto layerID = Layers::Ignore_Collisions;
-	auto aLayerID = aObject->GetLayerID();
-	auto bLayerID = bObject->GetLayerID();
+	auto aLayerID = aObject.GetLayerID();
+	auto bLayerID = bObject.GetLayerID();
 
 	if (aLayerID == layerID || bLayerID == layerID)
 		return;
 
-	if (aBounds->GetBoundingVolume()->isTrigger || bBounds->GetBoundingVolume()->isTrigger)
+	if (a.GetBoundingVolume()->isTrigger || b.GetBoundingVolume()->isTrigger)
 		return;
 
-	for (const auto& layer : aBounds->GetIgnoredLayers()) {
+	for (const auto& layer : a.GetIgnoredLayers()) {
 		if (bLayerID == layer)
 			return;
 	}
 
-	for (const auto& layer : bBounds->GetIgnoredLayers()) {
+	for (const auto& layer : b.GetIgnoredLayers()) {
 		if (aLayerID == layer)
 			return;
 	}
 
-	PhysicsObject* physA = a.GetPhysicsObject();
-	PhysicsObject* physB = b.GetPhysicsObject();
+	PhysicsObject* physA = a.GetPhysicsComponent()->GetPhysicsObject();
+	PhysicsObject* physB = b.GetPhysicsComponent()->GetPhysicsObject();
 
-	Transform& transformA = aObject->GetTransform();
-	Transform& transformB = bObject->GetTransform();
+	Transform& transformA = aObject.GetTransform();
+	Transform& transformB = bObject.GetTransform();
 
 	float totalMass = physA->GetInverseMass() + physB->GetInverseMass();
 
@@ -220,8 +217,6 @@ void PhysicsSystem::ImpulseResolveCollision(PhysicsComponent& a, PhysicsComponen
 	Vector3 fullVelocityA = physA->GetLinearVelocity() + angVelocityA;
 	Vector3 fullVelocityB = physB->GetLinearVelocity() + angVelocityB;
 
-
-
 	Vector3 contactVelocity = fullVelocityB - fullVelocityA;	
 	float cFriction = (physA->GetFriction() + physB->GetFriction()) / 2;
 	contactVelocity *= cFriction;
@@ -231,7 +226,7 @@ void PhysicsSystem::ImpulseResolveCollision(PhysicsComponent& a, PhysicsComponen
 	Vector3 inertiaB = Vector::Cross(physB->GetInertiaTensor() * Vector::Cross(relativeB, p.normal), relativeB);
 	float angularEffect = Vector::Dot(inertiaA + inertiaB, p.normal);
 
-	float cRestitution = a.GetRestitution() + a.GetRestitution(); 
+	float cRestitution = physA->GetRestitution() + physB->GetRestitution();
 
 	if (cRestitution > 0)
 		cRestitution /= 2;
@@ -262,7 +257,7 @@ void PhysicsSystem::BroadPhase() {
 		if (!(*i)->GetBroadphaseAABB(halfSizes)) {
 			continue;
 		}
-		Vector3 pos = (*i)->GetGameObject()->GetTransform().GetPosition();
+		Vector3 pos = (*i)->GetGameObject().GetTransform().GetPosition();
 		tree.Insert(*i, pos, halfSizes);
 	}
 	tree.OperateOnContents([&](std::list<QuadTreeEntry<BoundsComponent*>>& data) 
@@ -339,7 +334,7 @@ void PhysicsSystem::IntegrateVelocity(float dt) {
 		if (object == nullptr) 
 			continue;
 
-		Transform& transform = (*i)->GetGameObject()->GetTransform();
+		Transform& transform = (*i)->GetGameObject().GetTransform();
 
 		Vector3 position = transform.GetPosition();
 		Vector3 linearVel = object->GetLinearVelocity();
@@ -368,7 +363,7 @@ void PhysicsSystem::IntegrateVelocity(float dt) {
 }
 
 void PhysicsSystem::ClearForces() {
-	gameWorld.OperateOnContents(
+	gameWorld.OperateOnPhysicsContents(
 		[](PhysicsComponent* o) {
 			if (o->GetPhysicsObject())
 				o->GetPhysicsObject()->ClearForces();

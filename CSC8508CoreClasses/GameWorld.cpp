@@ -39,6 +39,17 @@ void GameWorld::AddGameObject(GameObject* o) {
 	gameObjects.emplace_back(o);
 	o->SetWorldID(worldIDCounter++);
 	worldStateCounter++;
+
+	auto bounds = o->TryGetComponent<BoundsComponent>();
+	auto phys = o->TryGetComponent<PhysicsComponent>();
+
+	if (bounds)
+		boundsComponents.emplace_back(bounds);
+
+	if (phys)
+		physicsComponents.emplace_back(phys);
+
+	o->InvokeOnAwake();
 }
 
 void GameWorld::RemoveGameObject(GameObject* o, bool andDelete) {
@@ -73,6 +84,12 @@ void GameWorld::GetObjectIterators(
 	last	= gameObjects.end();
 }
 
+void GameWorld::OperateOnPhysicsContents(PhysicsComponentFunc f) {
+	for (PhysicsComponent* g : physicsComponents) {
+		f(g);
+	}
+}
+
 void GameWorld::OperateOnContents(GameObjectFunc f) {
 	for (GameObject* g : gameObjects) {
 		f(g);
@@ -80,18 +97,23 @@ void GameWorld::OperateOnContents(GameObjectFunc f) {
 }
 
 void GameWorld::UpdateWorld(float dt) {
-	auto rng = std::default_random_engine{};
 
+
+	for (auto& obj : gameObjects) {
+		obj->InvokeUpdate(dt);
+	}
+
+	/*
+	auto rng = std::default_random_engine{};
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 	std::default_random_engine e(seed);
 
-	if (shuffleObjects) {
+	if (shuffleObjects) 
 		std::shuffle(gameObjects.begin(), gameObjects.end(), e);
-	}
 
-	if (shuffleConstraints) {
+	if (shuffleConstraints) 
 		std::shuffle(constraints.begin(), constraints.end(), e);
-	}
+	*/
 }
 
 bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObject, BoundsComponent* ignoreThis, vector<Layers::LayerID>* ignoreLayers) const {
@@ -106,7 +128,7 @@ bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObje
 
 		if (ignoreLayers != nullptr) {
 			for (const Layers::LayerID& var : *ignoreLayers) {
-				if (i->GetGameObject()->GetLayerID() == var) {
+				if (i->GetGameObject().GetLayerID() == var) {
 					toContinue = true;
 					break;
 				}
@@ -116,14 +138,14 @@ bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObje
 		if (toContinue)
 			continue;
 
-		if (i->GetGameObject()->GetLayerID() == Layers::Ignore_RayCast || i->GetGameObject()->GetLayerID() == Layers::UI)
+		if (i->GetGameObject().GetLayerID() == Layers::Ignore_RayCast || i->GetGameObject().GetLayerID() == Layers::UI)
 			continue;
 
 		RayCollision thisCollision;
 		if (CollisionDetection::RayIntersection(r, *i, thisCollision)) {
 				
 			if (!closestObject) {	
-				closestCollision		= collision;
+				closestCollision = collision;
 				closestCollision.node = i;
 				return true;
 			}
@@ -136,8 +158,8 @@ bool GameWorld::Raycast(Ray& r, RayCollision& closestCollision, bool closestObje
 		}
 	}
 	if (collision.node) {
-		closestCollision		= collision;
-		closestCollision.node	= collision.node;
+		closestCollision = collision;
+		closestCollision.node = collision.node;
 		return true;
 	}
 	return false;
