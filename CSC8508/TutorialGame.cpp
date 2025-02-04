@@ -159,7 +159,6 @@ void TutorialGame::UpdateGame(float dt)
 
 	mainMenu->Update(dt);
 	renderer->Render();
-	renderer->Update(dt);
 	Debug::UpdateRenderables(dt);
 
 	if (inPause)
@@ -185,7 +184,7 @@ void TutorialGame::LockedObjectMovement()
 	fwdAxis.y = 0.0f;
 	fwdAxis = Vector::Normalise(fwdAxis);
 
-	PhysicsComponent* phys = selectionObject->GetGameObject().TryGetComponent<PhysicsComponent>();
+	auto phys = selectionObject->GetPhysicsComponent();
 
 	if(!phys)
 		return;
@@ -371,11 +370,9 @@ void TutorialGame::MoveSelectedObject() {
 		if (world->Raycast(ray, closestCollision, true)) {
 			if (closestCollision.node == selectionObject) {
 
-				PhysicsComponent* phys = selectionObject->GetGameObject().TryGetComponent<PhysicsComponent>();
-				if (!phys)
-					return;
-				
-				phys->GetPhysicsObject()->AddForceAtPosition(ray.GetDirection() * forceMagnitude, closestCollision.collidedAt);
+				auto phys = selectionObject->GetPhysicsComponent();
+				if (phys)
+					phys->GetPhysicsObject()->AddForceAtPosition(ray.GetDirection() * forceMagnitude, closestCollision.collidedAt);
 			}
 		}
 	}

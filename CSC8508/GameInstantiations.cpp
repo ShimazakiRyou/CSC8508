@@ -60,9 +60,8 @@ GameObject* TutorialGame::AddPlayerToWorld(const Vector3& position) {
 	PhysicsComponent* phys = players->AddComponent<PhysicsComponent>();
 	BoundsComponent* bounds = players->AddComponent<BoundsComponent>((CollisionVolume*)volume, phys);
 
-	bounds->SetBoundingVolume((CollisionVolume*)volume);
-	players->GetTransform().SetScale(Vector3(meshSize, meshSize, meshSize)).SetPosition(position);
 
+	players->GetTransform().SetScale(Vector3(meshSize, meshSize, meshSize)).SetPosition(position);
 	players->SetLayerID(Layers::LayerID::Player);
 	players->SetTag(Tags::Player);
 
@@ -94,7 +93,6 @@ GameObject* TutorialGame::AddFloorToWorld(const Vector3& position)
 	PhysicsComponent* phys = floor->AddComponent<PhysicsComponent>();
 	BoundsComponent* bounds = floor->AddComponent<BoundsComponent>((CollisionVolume*) volume, phys);
 
-	bounds->SetBoundingVolume((CollisionVolume*)volume);
 	floor->GetTransform().SetScale(floorSize * 2.0f).SetPosition(position);
 
 	floor->SetRenderObject(new RenderObject(&floor->GetTransform(), cubeMesh, basicTex, basicShader));
