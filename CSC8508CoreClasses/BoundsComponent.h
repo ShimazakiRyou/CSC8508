@@ -20,7 +20,7 @@ namespace NCL::CSC8508
 	{
 	public:
 
-		BoundsComponent(GameObject& gameObject, CollisionVolume* collisionVolume);
+		BoundsComponent(GameObject& gameObject, CollisionVolume* collisionVolume, PhysicsComponent* physicsComponent = nullptr);
 
 		~BoundsComponent();
 

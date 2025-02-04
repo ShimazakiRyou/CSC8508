@@ -3,11 +3,7 @@
 #include "Ray.h"
 #include "Kitten.h"
 #include "CollectMe.h"
-
 #include "Window.h"
-
-#include "UpdateObject.h"
-//#include "Controller.h"
 #include "CollisionDetection.h"
 
 namespace NCL {
@@ -34,13 +30,25 @@ namespace NCL {
                 activeController = &c;
             }
 
+           /**
+            * Function invoked each frame after Update.
+            * @param deltaTime Time since last frame
+            */
+            void OnAwake() override
+            {
+                physicsComponent = this->TryGetComponent<PhysicsComponent>();
+
+                if (physicsComponent)
+                    physicsObj = physicsComponent->GetPhysicsObject();
+            }
+
             /**
              * Function invoked each frame.
              * @param deltaTime Time since last frame
              */
             void Update(float deltaTime) override
             {
-                if (activeController == nullptr)
+                if (activeController == nullptr || physicsObj == nullptr)
                     return;
 
                 Vector3 dir;
@@ -59,8 +67,8 @@ namespace NCL {
                 Matrix3 offsetRotation = Matrix::RotationMatrix3x3(-45.0f, Vector3(0, 1, 0));
                 dir = offsetRotation * dir;
 
-                physicsComponent->GetPhysicsObject()->AddForce(dir * speed);
-                physicsComponent->GetPhysicsObject()->RotateTowardsVelocity();
+                physicsObj->AddForce(dir * speed);
+                physicsObj->RotateTowardsVelocity();
             }
 
             void OnCollisionBegin(BoundsComponent* otherBounds) override {
@@ -73,7 +81,7 @@ namespace NCL {
                     if (Window::GetMouse()->ButtonDown(NCL::MouseButtons::Right))
                     {
                         Kitten& kitten = static_cast<Kitten&>(otherObject);
-                        kitten.ThrowSelf(Vector::Normalise(physicsComponent->GetPhysicsObject()->GetLinearVelocity()));
+                        kitten.ThrowSelf(Vector::Normalise(physicsObj->GetLinearVelocity()));
                     }
                 }
                 else if (otherObject.GetTag() == Tags::Collect)
@@ -88,40 +96,16 @@ namespace NCL {
                     }
                 }
             }
-            /**
-            * Function invoked each frame after Update.
-            * @param deltaTime Time since last frame
-            */
-            void OnAwake() override 
-            {
-                physicsComponent = this->TryGetComponent<PhysicsComponent>();
-            }
-
-            /**
-             * Function invoked each frame after Update.
-             * @param deltaTime Time since last frame
-             */
-            void LateUpdate(float deltaTime) override {}
-
-            /**
-             * Function invoked when the component is enabled.
-             */
-            void OnEnable() override {}
-
-            /**
-             * Function invoked when the component is disabled.
-             */
-            void OnDisable() override {}
-
-
-
+ 
         protected:
             const Controller* activeController = nullptr;
             float speed = 5.0f;
             float	yaw;
             EndGame endGame;
             IncreaseScore increaseScore;
+
             PhysicsComponent* physicsComponent;
+            PhysicsObject* physicsObj;
         };
     }
 }

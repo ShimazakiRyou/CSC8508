@@ -35,7 +35,7 @@ GameObject* TutorialGame::AddNavMeshToWorld(const Vector3& position, Vector3 dim
 		OBBVolume* volume = new OBBVolume(dimensions);
 
 		PhysicsComponent* phys = colliderObject->AddComponent<PhysicsComponent>();
-		BoundsComponent* bounds = colliderObject->AddComponent<BoundsComponent>((CollisionVolume*)volume);
+		BoundsComponent* bounds = colliderObject->AddComponent<BoundsComponent>((CollisionVolume*)volume, phys);
 
 		colliderObject->GetTransform().SetScale(dimensions * 2.0f).SetPosition(localPosition).SetOrientation(rotationMatrix);
 		colliderObject->SetRenderObject(new RenderObject(&colliderObject->GetTransform(), cubeMesh, basicTex, basicShader));
@@ -58,7 +58,7 @@ GameObject* TutorialGame::AddPlayerToWorld(const Vector3& position) {
 	CapsuleVolume* volume = new CapsuleVolume(2.5f, 0.5f);
 
 	PhysicsComponent* phys = players->AddComponent<PhysicsComponent>();
-	BoundsComponent* bounds = players->AddComponent<BoundsComponent>((CollisionVolume*)volume);
+	BoundsComponent* bounds = players->AddComponent<BoundsComponent>((CollisionVolume*)volume, phys);
 
 	bounds->SetBoundingVolume((CollisionVolume*)volume);
 	players->GetTransform().SetScale(Vector3(meshSize, meshSize, meshSize)).SetPosition(position);
@@ -92,7 +92,7 @@ GameObject* TutorialGame::AddFloorToWorld(const Vector3& position)
 
 
 	PhysicsComponent* phys = floor->AddComponent<PhysicsComponent>();
-	BoundsComponent* bounds = floor->AddComponent<BoundsComponent>((CollisionVolume*) volume);
+	BoundsComponent* bounds = floor->AddComponent<BoundsComponent>((CollisionVolume*) volume, phys);
 
 	bounds->SetBoundingVolume((CollisionVolume*)volume);
 	floor->GetTransform().SetScale(floorSize * 2.0f).SetPosition(position);
@@ -114,7 +114,7 @@ GameObject* TutorialGame::AddSphereToWorld(const Vector3& position, float radius
 	SphereVolume* volume = new SphereVolume(radius);
 
 	PhysicsComponent* phys = sphere->AddComponent<PhysicsComponent>();
-	BoundsComponent* bounds = sphere->AddComponent<BoundsComponent>((CollisionVolume*)volume);
+	BoundsComponent* bounds = sphere->AddComponent<BoundsComponent>((CollisionVolume*)volume, phys);
 
 	bounds->SetBoundingVolume((CollisionVolume*)volume);
 	sphere->GetTransform().SetScale(sphereSize).SetPosition(position);
@@ -135,7 +135,7 @@ GameObject* TutorialGame::AddCubeToWorld(const Vector3& position, Vector3 dimens
 	OBBVolume* volume = new OBBVolume(dimensions);
 
 	PhysicsComponent* phys = cube->AddComponent<PhysicsComponent>();
-	BoundsComponent* bounds = cube->AddComponent<BoundsComponent>((CollisionVolume*)volume);
+	BoundsComponent* bounds = cube->AddComponent<BoundsComponent>((CollisionVolume*)volume, phys);
 
 	bounds->SetBoundingVolume((CollisionVolume*)volume);
 	cube->GetTransform().SetPosition(position).SetScale(dimensions * 2.0f);
