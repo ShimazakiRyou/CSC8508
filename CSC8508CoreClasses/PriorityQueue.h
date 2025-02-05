@@ -19,6 +19,8 @@ public:
      */
     void Insert(T item, unsigned short int priority, bool atEnd = true);
 
+    void Remove(T item);
+
     [[nodiscard]]
     T Get(unsigned int index) const { return vec.at(index); }
 
@@ -34,6 +36,8 @@ public:
     unsigned int GetLength() const { return vec.size(); }
 
 protected:
+    unsigned short int maxPriority;
+
     // Array of indices pointing to the first position of each priority level
     unsigned short int* priorityPointers;
 
@@ -43,7 +47,7 @@ protected:
 
 
 template <typename T>
-PriorityQueue<T>::PriorityQueue(unsigned short int const maxPriority)
+PriorityQueue<T>::PriorityQueue(unsigned short int const maxPriority) : maxPriority(maxPriority)
 {
     priorityPointers = new unsigned short int [maxPriority] { }; // Create pointers array and assign all values to 0
     vec = std::vector<T>();
@@ -59,12 +63,35 @@ PriorityQueue<T>::~PriorityQueue() {
 template<typename T>
 void PriorityQueue<T>::Insert(T item, unsigned short int const priority, bool const atEnd) {
     // Insert the item into vec
-    if (priority >= sizeof(priorityPointers)) vec.insert(vec.begin(), item);
-    else vec.insert(vec.begin() + priorityPointers[priority], item);
+    if (priority >= maxPriority) {
+        vec.insert(atEnd ? vec.begin() + priorityPointers[maxPriority - 1] : vec.begin(), item);
+    } else {
+        vec.insert(atEnd ? (priority == 0 ? vec.end() : vec.begin() + priorityPointers[priority - 1])
+            : vec.begin() + priorityPointers[priority], item);
+    }
 
     // Update priorityPointers
-    int const start = atEnd ? priority : priority + 1;
-    for (unsigned short int i = start; i < sizeof(priorityPointers); i--) priorityPointers[i]++; // NOLINT(*-too-small-loop-variable)
+    for (int i = 0; i < priority; i++) priorityPointers[i]++;
+}
+
+
+template<typename T>
+void PriorityQueue<T>::Remove(T item) {
+    // Check that the item is in vec, return if not
+    auto it = find(vec.begin(), vec.end(), item);
+    if (it == vec.end()) return;
+
+    // Cache item's index in vec
+    int const index = it - vec.begin();
+
+    // Erase item from vec
+    vec.erase(it);
+
+    // Update priorityPointers
+    for (int i = 0; i < maxPriority; i++) {
+        if (priorityPointers[i] < index) break;
+        priorityPointers[i]--;
+    }
 }
 
 #endif //PRIORITYQUEUE_H
