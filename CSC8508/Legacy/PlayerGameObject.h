@@ -60,7 +60,7 @@ namespace NCL {
                 dir += yawRotation * Vector3(0, 0, -activeController->GetNamedAxis("Forward"));
                 dir += yawRotation * Vector3(activeController->GetNamedAxis("Sidestep"), 0, 0);
 
-                Matrix3 offsetRotation = Matrix::RotationMatrix3x3(-45.0f, Vector3(0, 1, 0));
+                Matrix3 offsetRotation = Matrix::RotationMatrix3x3(-55.0f, Vector3(0, 1, 0));
                 dir = offsetRotation * dir;
 
                 physicsObj->AddForce(dir * speed);
@@ -87,7 +87,7 @@ namespace NCL {
  
         protected:
             const Controller* activeController = nullptr;
-            float speed = 5.0f;
+            float speed = 10.0f;
             float	yaw = 0;
             EndGame endGame;
             IncreaseScore increaseScore;

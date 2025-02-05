@@ -23,28 +23,6 @@ namespace NCL::CSC8508
 
 		~PhysicsComponent();
 
-		/**
-		 * Function invoked each frame.
-		 * @param deltaTime Time since last frame
-		 */
-		void Update(float deltaTime) override;
-
-		/**
-		 * Function invoked each frame after Update.
-		 * @param deltaTime Time since last frame
-		 */
-		void LateUpdate(float deltaTime) override;
-
-		/**
-		 * Function invoked when the component is enabled.
-		 */
-		void OnEnable() override;
-
-		/**
-		 * Function invoked when the component is disabled.
-		 */
-		void OnDisable() override;
-
 		PhysicsObject* GetPhysicsObject() const {
 			return physicsObject;
 		}

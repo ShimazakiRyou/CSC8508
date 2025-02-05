@@ -14,19 +14,3 @@ PhysicsComponent::PhysicsComponent(GameObject& gameObject) : IComponent(gameObje
 PhysicsComponent::~PhysicsComponent() {
 	delete physicsObject;
 }
-
-void PhysicsComponent::Update(float deltaTime) {
-	if (physicsObject) {
-	}
-}
-
-void PhysicsComponent::LateUpdate(float deltaTime) {
-	if (physicsObject) {
-	}
-}
-
-void PhysicsComponent::OnEnable() {
-}
-
-void PhysicsComponent::OnDisable() {
-}
