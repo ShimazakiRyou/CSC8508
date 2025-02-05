@@ -71,10 +71,8 @@ GameObject* TutorialGame::AddPlayerToWorld(const Vector3& position) {
 	phys->GetPhysicsObject()->SetInverseMass(inverseMass);
 	phys->GetPhysicsObject()->InitSphereInertia();
 	players->SetEndGame([&](bool hasWon) {EndGame(hasWon); });
-	players->SetIncreaseScore([&](float score) {UpdateScore(score); });
 
 	bounds->AddToIgnoredLayers(Layers::Enemy);
-
 
 	players->GetRenderObject()->SetColour(Vector4(0, 0, 0, 1.0f));
 	players->SetController(controller);

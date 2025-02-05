@@ -33,28 +33,6 @@ namespace NCL {
 
             ~NavMeshComponent() {}
 
-            /**
-             * Function invoked each frame.
-             * @param deltaTime Time since last frame
-             */
-            void Update(float deltaTime) override {}
-
-            /**
-             * Function invoked each frame after Update.
-             * @param deltaTime Time since last frame
-             */
-            void LateUpdate(float deltaTime) override {}
-
-            /**
-             * Function invoked when the component is enabled.
-             */
-            void OnEnable() override {}
-
-            /**
-             * Function invoked when the component is disabled.
-             */
-            void OnDisable() override {}
-
             bool AtDestination() {
                 Vector3 pos = this->GetGameObject().GetTransform().GetPosition();
                 return Vector::Length(pos - testNodes[0]) < minWayPointDistanceOffset;

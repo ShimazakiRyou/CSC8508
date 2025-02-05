@@ -22,10 +22,6 @@ namespace NCL {
                 this->endGame = endGame;
             }
 
-            void SetIncreaseScore(IncreaseScore increaseScore) {
-                this->increaseScore = increaseScore;
-            }
-
             void SetController(const Controller& c) {
                 activeController = &c;
             }
@@ -76,14 +72,6 @@ namespace NCL {
 
                 if (otherObject.GetTag() == Tags::Enemy)
                     endGame(false);
-                else if (otherObject.GetTag() == Tags::Kitten)
-                {
-                    if (Window::GetMouse()->ButtonDown(NCL::MouseButtons::Right))
-                    {
-                        Kitten& kitten = static_cast<Kitten&>(otherObject);
-                        kitten.ThrowSelf(Vector::Normalise(physicsObj->GetLinearVelocity()));
-                    }
-                }
                 else if (otherObject.GetTag() == Tags::Collect)
                 {
                     CollectMe& collect = static_cast<CollectMe&>(otherObject);

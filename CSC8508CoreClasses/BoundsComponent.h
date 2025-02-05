@@ -23,28 +23,6 @@ namespace NCL::CSC8508
 
 		~BoundsComponent();
 
-		/**
-		 * Function invoked each frame.
-		 * @param deltaTime Time since last frame
-		 */
-		void Update(float deltaTime) override;
-
-		/**
-		 * Function invoked each frame after Update.
-		 * @param deltaTime Time since last frame
-		 */
-		void LateUpdate(float deltaTime) override;
-
-		/**
-		 * Function invoked when the component is enabled.
-		 */
-		void OnEnable() override;
-
-		/**
-		 * Function invoked when the component is disabled.
-		 */
-		void OnDisable() override;
-
 		void SetBoundingVolume(CollisionVolume* vol) {
 			boundingVolume = vol;
 		}
@@ -57,7 +35,6 @@ namespace NCL::CSC8508
 		const PhysicsComponent* GetPhysicsComponent() const {
 			return physicsComponent;
 		}
-
 
 		bool GetBroadphaseAABB(Vector3& outsize) const;
 

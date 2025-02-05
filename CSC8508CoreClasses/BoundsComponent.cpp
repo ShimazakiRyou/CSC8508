@@ -20,22 +20,6 @@ BoundsComponent::~BoundsComponent() {
 	delete boundingVolume;
 }
 
-void BoundsComponent::Update(float deltaTime) {
-	if (boundingVolume) {
-	}
-}
-
-void BoundsComponent::LateUpdate(float deltaTime) {
-	if (boundingVolume) {
-	}
-}
-
-void BoundsComponent::OnEnable() {
-}
-
-void BoundsComponent::OnDisable() {
-}
-
 bool BoundsComponent::GetBroadphaseAABB(Vector3& outSize) const {
 	if (!boundingVolume) {
 		return false;
