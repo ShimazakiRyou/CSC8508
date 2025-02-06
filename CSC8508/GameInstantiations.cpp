@@ -14,7 +14,6 @@
 using namespace NCL;
 using namespace CSC8508;
 
-
 GameObject* TutorialGame::AddNavMeshToWorld(const Vector3& position, Vector3 dimensions)
 {
 	navMesh = new NavigationMesh("smalltest.navmesh");
@@ -29,7 +28,6 @@ GameObject* TutorialGame::AddNavMeshToWorld(const Vector3& position, Vector3 dim
 		Vector3 dimensions, localPosition;
 		Quaternion rotationMatrix;
 		CalculateCubeTransformations(vertices, localPosition, dimensions, rotationMatrix);
-
 
 		GameObject* colliderObject = new GameObject();
 		OBBVolume* volume = new OBBVolume(dimensions);

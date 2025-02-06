@@ -89,6 +89,7 @@ set(Header_Files
     "Debug.h"
     "GameObject.h"
     "IComponent.h"
+    "ComponentManager.h"
     "PhysicsComponent.h"
     "BoundsComponent.h"
     "GameWorld.h"
