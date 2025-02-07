@@ -26,7 +26,7 @@ namespace NCL::CSC8508 {
 
 	class GameObject	{
 	public:
-		GameObject(const std::string& name = "", bool isStatic = false);
+		GameObject(bool isStatic = false);
 		~GameObject();
 
 		bool IsEnabled() const { return isEnabled;}
@@ -82,9 +82,6 @@ namespace NCL::CSC8508 {
 			networkObject = newObject;
 		}
 
-		const std::string& GetName() const {
-			return name;
-		}
 
 		virtual void OnCollisionBegin(BoundsComponent* otherObject) {
 			//std::cout << "OnCollisionBegin event occured!\n";
@@ -157,7 +154,6 @@ namespace NCL::CSC8508 {
 
 		Layers::LayerID	layerID;
 		Tags::Tag	tag; // Change to vector
-		std::string	name;
 	};
 }
 

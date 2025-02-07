@@ -10,8 +10,7 @@
 
 using namespace NCL::CSC8508;
 
-GameObject::GameObject(const std::string& objectName, const bool newIsStatic): isStatic(newIsStatic)	{
-	name			= objectName;
+GameObject::GameObject(const bool newIsStatic): isStatic(newIsStatic)	{
 	worldID			= -1;
 	isEnabled		= true;
 	layerID = Layers::LayerID::Default;
