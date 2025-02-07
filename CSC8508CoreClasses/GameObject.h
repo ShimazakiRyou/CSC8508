@@ -5,6 +5,7 @@
 #pragma once
 #include "Transform.h"
 #include "CollisionVolume.h"
+#include "IComponent.h"
 
 using std::vector;
 
@@ -21,7 +22,6 @@ namespace NCL::CSC8508 {
 	class NetworkObject;
 	class RenderObject;
 	class PhysicsObject;
-	class IComponent;
 	class BoundsComponent;
 
 	class GameObject	{
