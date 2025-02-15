@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\CMakeFiles\CSC8508.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\GameInstantiations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\GameTechRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\EnemyGameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\Kitten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\PlayerGameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\StateGameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\Swarm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\NetworkPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\NetworkedGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Scene\SceneManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\TutorialGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dungeon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\GameTechRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\CollectMe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\EnemyGameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\Kitten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\NavMeshComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\PlayerGameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\StateGameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\Swarm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\UpdateObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Legacy\VictoryPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\NetworkPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\NetworkedGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Scene\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\Scene\SceneManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\TutorialGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\CMakeFiles\CSC8508.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\CMakeFiles\CSC8508.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{235ADB55-BDCF-39D5-BBE9-4E7EA4787200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{2DBB346C-A6CD-3FB5-8F60-3BBF3EB8407A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2DAEB9DE-D6F2-3531-A69C-848DC360EC87}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

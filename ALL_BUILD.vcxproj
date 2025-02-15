@@ -17,7 +17,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8C518EBF-19B4-3EC0-BC86-C28739A418E7}</ProjectGuid>
+    <ProjectGuid>{D472A0DD-60ED-3ED0-BF5B-32BDB252396A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -68,11 +68,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/c4071068/source/repos/CSC8503TutorialWork/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Users/c4071068/source/repos/CSC8503TutorialWork -BC:/Users/c4071068/source/repos/CSC8503TutorialWork --check-stamp-file C:/Users/c4071068/source/repos/CSC8503TutorialWork/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508" "-BC:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508" --check-stamp-file "C:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -80,12 +80,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMake\Utils.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\3.31.0\CMakeCXXCompiler.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\3.31.0\CMakeRCCompiler.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\3.31.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMake\Utils.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\3.31.0\CMakeCXXCompiler.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\3.31.0\CMakeRCCompiler.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\3.31.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/c4071068/source/repos/CSC8503TutorialWork/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Users/c4071068/source/repos/CSC8503TutorialWork -BC:/Users/c4071068/source/repos/CSC8503TutorialWork --check-stamp-file C:/Users/c4071068/source/repos/CSC8503TutorialWork/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508" "-BC:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508" --check-stamp-file "C:/Users/12022/Desktop/作业/CSC8503 Code 2024/CSC8508/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -93,8 +93,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMake\Utils.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\3.31.0\CMakeCXXCompiler.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\3.31.0\CMakeRCCompiler.cmake;C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\3.31.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\c4071068\source\repos\CSC8503TutorialWork\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMake\Utils.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\3.31.0\CMakeCXXCompiler.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\3.31.0\CMakeRCCompiler.cmake;C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\3.31.0\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -102,26 +102,30 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\c4071068\source\repos\CSC8503TutorialWork\ZERO_CHECK.vcxproj">
-      <Project>{84645941-B960-3A70-9CBC-F4B7173EB4D5}</Project>
+    <ProjectReference Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\ZERO_CHECK.vcxproj">
+      <Project>{7B227048-F38B-3E57-8DB8-AEF5C2753876}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\c4071068\source\repos\CSC8503TutorialWork\CSC8503\CSC8503.vcxproj">
-      <Project>{99A8ED98-B8D2-3D1A-85D8-ED452C522B8F}</Project>
-      <Name>CSC8503</Name>
+    <ProjectReference Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508\CSC8508.vcxproj">
+      <Project>{192A4B63-B707-38A2-A9F0-02D4BA5DFA6F}</Project>
+      <Name>CSC8508</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\c4071068\source\repos\CSC8503TutorialWork\CSC8503CoreClasses\CSC8503CoreClasses.vcxproj">
-      <Project>{71565A07-A826-3185-8087-C20B87A533E4}</Project>
-      <Name>CSC8503CoreClasses</Name>
+    <ProjectReference Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CSC8508CoreClasses.vcxproj">
+      <Project>{BF576888-31A0-31DE-9C6C-7E905EE9758A}</Project>
+      <Name>CSC8508CoreClasses</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\c4071068\source\repos\CSC8503TutorialWork\NCLCoreClasses\NCLCoreClasses.vcxproj">
-      <Project>{653BE862-7D40-3C5E-B1C7-3411FE5ED99E}</Project>
+    <ProjectReference Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\Event\Event.vcxproj">
+      <Project>{DC947DBE-D63F-3285-BA16-D5CA5B835FE2}</Project>
+      <Name>Event</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\NCLCoreClasses\NCLCoreClasses.vcxproj">
+      <Project>{FDDC2525-ED27-3B40-8FD0-4538D0995CB3}</Project>
       <Name>NCLCoreClasses</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\c4071068\source\repos\CSC8503TutorialWork\OpenGLRendering\OpenGLRendering.vcxproj">
-      <Project>{D1A0E61A-6EB5-33D5-8C58-EF2D0EABDECE}</Project>
+    <ProjectReference Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\OpenGLRendering\OpenGLRendering.vcxproj">
+      <Project>{3DBD3822-F4FA-3282-8222-FC82852A023D}</Project>
       <Name>OpenGLRendering</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CMakeFiles\CSC8508CoreClasses.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\Debug.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\IComponent.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\ComponentManager.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PhysicsComponent.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BoundsComponent.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameWorld.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\RenderObject.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\Transform.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\IComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PhysicsComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BoundsComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\RenderObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourAction.h">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourNode.h">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourNodeWithChildren.h">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourSelector.h">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourSelector.cpp">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourSequence.h">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\BehaviourSequence.cpp">
+      <Filter>AI\Behaviour Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PushdownMachine.h">
+      <Filter>AI\Pushdown Automata</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PushdownMachine.cpp">
+      <Filter>AI\Pushdown Automata</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PushdownState.h">
+      <Filter>AI\Pushdown Automata</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PushdownState.cpp">
+      <Filter>AI\Pushdown Automata</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\State.h">
+      <Filter>AI\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\StateMachine.h">
+      <Filter>AI\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\StateMachine.cpp">
+      <Filter>AI\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\StateTransition.h">
+      <Filter>AI\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NavigationGrid.h">
+      <Filter>AI\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NavigationGrid.cpp">
+      <Filter>AI\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NavigationMesh.cpp">
+      <Filter>AI\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NavigationMesh.h">
+      <Filter>AI\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NavigationMap.h">
+      <Filter>AI\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NavigationPath.h">
+      <Filter>AI\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\AABBVolume.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CapsuleVolume.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CapsuleVolume.cpp">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CollisionDetection.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CollisionDetection.cpp">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CollisionVolume.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\OBBVolume.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\QuadTree.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\QuadTree.cpp">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\Ray.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\SphereVolume.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameClient.h">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameClient.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameServer.h">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\GameServer.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NetworkBase.h">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NetworkBase.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NetworkObject.h">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NetworkObject.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NetworkState.h">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\NetworkState.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\Constraint.h">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PositionConstraint.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PositionConstraint.h">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\OrientationConstraint.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\OrientationConstraint.h">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PhysicsObject.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PhysicsObject.h">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PhysicsSystem.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\PhysicsSystem.h">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\callbacks.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\list.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\list.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\protocol.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\protocol.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\win32.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\win32.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\enet.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\time.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\types.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\utility.h">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\compress.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\host.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\packet.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\enet\peer.c">
+      <Filter>eNet</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CMakeFiles\CSC8508CoreClasses.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CMakeFiles\CSC8508CoreClasses.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\12022\Desktop\作业\CSC8503 Code 2024\CSC8508\CSC8508CoreClasses\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AI">
+      <UniqueIdentifier>{5100AA3A-8F3C-37A9-A74E-C7D0B265C66B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI\Behaviour Trees">
+      <UniqueIdentifier>{A49CDA89-927D-3DBE-9B8A-C4318C0B93DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI\Pathfinding">
+      <UniqueIdentifier>{60475A9C-BBBC-3B33-B7A4-E55646A9AB20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI\Pushdown Automata">
+      <UniqueIdentifier>{99DD7016-619D-3745-8EA8-CA266C327489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI\State Machine">
+      <UniqueIdentifier>{128A2B31-3832-3E4C-AF8A-745933ADE109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision Detection">
+      <UniqueIdentifier>{43F8818F-D810-354E-B6F1-19DC2398BE25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{235ADB55-BDCF-39D5-BBE9-4E7EA4787200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking">
+      <UniqueIdentifier>{53D3C1E2-1C4F-3047-ACF8-DA60DE2EEDED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{EACFC56F-B6AA-39C7-8212-A67018AB776E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{2DBB346C-A6CD-3FB5-8F60-3BBF3EB8407A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2DAEB9DE-D6F2-3531-A69C-848DC360EC87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eNet">
+      <UniqueIdentifier>{EEE98E3F-CFFA-3F4D-BDE8-5E69A7BDBF19}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
